@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             registro.put("codigoPets",codigoPets)
             registro.put("Especie",Especie)
             registro.put("Sexo",Sexo)
-            registro.put("Habilitada",Habitada)
+            registro.put("Habitada",Habitada)
 
             baseDeDatos.insert(" Pets ",null, registro)
             baseDeDatos.close()
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
             etnSexo.setText("")
             etnHabitada.setText("")
 
-            Toast.makeText(this,"Registro exitoso",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"Registro Pets exitoso",Toast.LENGTH_LONG).show()
         }else{
             Toast.makeText(this,"Debes llenar todos los campos",Toast.LENGTH_SHORT).show()
         }
@@ -140,7 +140,7 @@ class MainActivity : AppCompatActivity() {
 
         if(!codigo.isEmpty()){
             //verificar si esta el codigo del produc
-            val cantidad:Int = baseDeDatos.delete("articulos","codigo=${codigo}",null)
+            val cantidad:Int = baseDeDatos.delete("Tienda Online","codigo=${codigo}",null)
             baseDeDatos.close()
             etnPets.setText("")
             etEspecie.setText("")
@@ -150,7 +150,7 @@ class MainActivity : AppCompatActivity() {
             if(cantidad==1){
                 Toast.makeText(this," Especie eliminado",Toast.LENGTH_SHORT).show()
             }else{
-                Toast.makeText(this,"No existe el Pets",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"No existe Pets",Toast.LENGTH_SHORT).show()
                 baseDeDatos.close()
             }
 

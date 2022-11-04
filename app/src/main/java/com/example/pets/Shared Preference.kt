@@ -23,7 +23,7 @@ class SharedPreference : AppCompatActivity() {
         etnSexo = findViewById(R.id.etn_Sexo)
         etnHabitada = findViewById(R.id.etn_Habitada)
 
-        var pref = getSharedPreferences("_datosPersona", MODE_PRIVATE)
+        var pref = getSharedPreferences("_datosPets", MODE_PRIVATE)
 
         var Pets = pref.getString("Pets","")
         var Especie = pref.getString("Especie","")
@@ -38,7 +38,7 @@ class SharedPreference : AppCompatActivity() {
     }
 
     fun guardar(vista: View){
-        var pref = getSharedPreferences("_datos Animales", Context.MODE_PRIVATE)
+        var pref = getSharedPreferences(" datos Pets", Context.MODE_PRIVATE)
         var editor = pref.edit()
 
         editor.putString("apellido",etnPets.toString())
