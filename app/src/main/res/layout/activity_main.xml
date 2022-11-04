@@ -2,6 +2,93 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/etn_Habitada"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    android:background="#03A9F4"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="147dp"
+        android:layout_height="543dp"
+        app:srcCompat="@drawable/iconopets"
+        tools:layout_editor_absoluteX="410dp"
+        tools:layout_editor_absoluteY="456dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="118dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toTopOf="@+id/_dynamic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/etn_Pets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pets"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="193dp" />
+
+    <EditText
+        android:id="@+id/etn_Sexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Sexo"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="418dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Habitada"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="509dp" />
+
+    <TextView
+        android:layout_width="96dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="32dp"
+        android:text="Tienda Online"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="168dp" />
+
+    <ListView
+        android:layout_width="247dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_Especie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <EditText
+            android:id="@+id/et_Especie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="92dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Especie " />
+    </ListView>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gracias por visitarnos  "
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="656dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
