@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity() {
             val CantidadPets:Int = baseDeDatos.update("Tienda Online",registro,"codigo=${codigo}",null)
             baseDeDatos.close()
 
-            //verifica si la consulta tiene valor
+            //verifica si la consulta tiene valor Pets
 
             if(CantidadPets==1){
                 Toast.makeText(this,"Articulo modificado correctamente",Toast.LENGTH_SHORT).show()
