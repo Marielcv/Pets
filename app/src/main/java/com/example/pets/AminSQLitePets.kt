@@ -11,7 +11,7 @@ class AdminSQLitePets
      version:Int):SQLiteOpenHelper(context,name,factory,version) {
     override fun onCreate(baseDeDatos: SQLiteDatabase?) {
         baseDeDatos?.execSQL("create table Pets" +
-                "(codigo int primary key, Especie text,sexo, Habitada)")
+                "(codigo int primary key, Especie ,sexo, Habitada)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
