@@ -29,7 +29,7 @@ class SharedPreference : AppCompatActivity() {
         var Especie = pref.getString("Especie","")
         var etnPet1 = etnPets
         etEspecie.setText(etEspecie)
-        )
+
 
     }
 
@@ -41,10 +41,10 @@ class SharedPreference : AppCompatActivity() {
         var pref = getSharedPreferences(" datos Pets", Context.MODE_PRIVATE)
         var editor = pref.edit()
 
-        editor.putString("apellido",etnPets.toString())
-        editor.putString("apellido",etEspecie.text.toString())
-        editor.putString("apellido",etnSexo.text.toString())
-        editor.putString("apellido",etnHabitada.text.toString())
+        editor.putString("Pets",etnPets.toString())
+        editor.putString("Pets",etEspecie.text.toString())
+        editor.putString("Pets",etnSexo.text.toString())
+        editor.putString("Pets",etnHabitada.text.toString())
 
 
 
@@ -59,4 +59,4 @@ private fun View.setText(etnPet: View?) {
 
 
 
-}
+

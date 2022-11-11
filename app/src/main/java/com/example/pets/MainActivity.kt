@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 
+@Suppress("UNUSED_LAMBDA_EXPRESSION")
 class MainActivity : AppCompatActivity() {
     private lateinit var etnPets:EditText
     private lateinit var etEspecie:EditText
@@ -59,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun buscar(vista:View){
+    private fun buscar(vista:View){
         //se crea la conexion a las base de datos
         val admin = AdminSQLitePets(this,"Tienda Online",null,1)
         val baseDeDatos:SQLiteDatabase = admin.writableDatabase
@@ -68,10 +69,13 @@ class MainActivity : AppCompatActivity() {
 
         if(!codigoPets.isEmpty()){
             //verificar si esta el codigo Pets
-            val fila = baseDeDatos.rawQuery("select descripcion, precio from articulos where codigo=${codigo}",null)
+            val CodigoPet = "CodigoPet"
+            val fila = baseDeDatos.rawQuery("select Pet, Especie from sexo where CodigoPet=${CodigoPet}",null)
             if(fila.moveToFirst()){
                 etEspecie.setText(fila.getString(0))
                 etnSexo.setText(fila.getString(1))
+                etEspecie.setText(fila.getString(1))
+                etnHabitada.setText(fila.getString(1))
                 baseDeDatos.close()
             }else{
                 Toast.makeText(this,"No existe Animales", Toast.LENGTH_SHORT).show()
@@ -93,9 +97,8 @@ class MainActivity : AppCompatActivity() {
         val Sexo = etnSexo.text.toString()
         val Habitada = etnHabitada.text.toString()
 
-        if(!Pets.isEmpty() && !Especie.isEmpty() && !Sexo.isEmpty() !Habitada.isEmpty() && ){
-            //codigoPets.toInt()
-            //Especie.toDouble()
+        if(!Pets.isEmpty() && !Especie.isEmpty() && !Sexo.isEmpty() && Habitada.isEmpty() &&{
+            //Pets.toString()
             val registro = ContentValues()
             val codigoPets = "CodigoPets"
             val etnEspecie = "Especie"
